@@ -1,6 +1,6 @@
 {
-  "name": "spring-loaders-react-example",
-  "homepage": "https://kalifa17.github.io/spring-loaders-react",
+  "name": "react-spring-loaders-example",
+  "homepage": "https://kalifa17.github.io/react-spring-loaders",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -9,7 +9,7 @@
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
-    "spring-loaders-react": "file:.."
+    "react-spring-loaders": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",

@@ -1,13 +1,13 @@
-# spring-loaders-react
+# Spring Loaders React Component
 
-> Description Spring Loaders with Rebound and Canvas React Component
+> Spring Loaders with Rebound and Canvas
 
-[![NPM](https://img.shields.io/npm/v/spring-loaders-react.svg)](https://www.npmjs.com/package/spring-loaders-react) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-spring-loaders.svg)](https://www.npmjs.com/package/react-spring-loaders) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save spring-loaders-react
+npm install --save react-spring-loaders
 ```
 
 ## Usage
@@ -15,7 +15,7 @@ npm install --save spring-loaders-react
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'spring-loaders-react'
+import MyComponent from 'react-spring-loaders'
 
 class Example extends Component {
   render () {

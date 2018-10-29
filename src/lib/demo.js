@@ -30,50 +30,27 @@ console.log(Spinner);
  */
 export const demo = {
 
-  //Index 1
-  settings: {
-    rebound: {
-      tension: 2,
-      friction: 5
-    },
-    spinner: {
-      radius: 80,
-      sides: 3,
-      depth: 4,
-      colors: {
-        background: '#000000',
-        stroke: '#000000',
-        base: '#222222',
-        child: '#FFFFFF'
-      },
-      alwaysForward: true, // When false the spring will reverse normally.
-      restAt: 0.5, // A number from 0.1 to 0.9 || null for full rotation
-      renderBase: true // Optionally render basePolygon
-    }
-  },
-
-  //Index 2
-  settings: {
-    rebound: {
-      tension: 14,
-      friction: 10
-    },
-    spinner: {
-      id: 'spinner',
-      radius: 90,
-      sides: 5,
-      depth: 8,
-      colors: {
-        background: '#00272C',
-        stroke: null,
-        base: null,
-        child: '#02C39A'
-      },
-      alwaysForward: true, // When false the spring will reverse normally.
-      restAt: null, // A number from 0.1 to 0.9 || null for full rotation
-      renderBase: false
-    }
-  },
+  //Index 1 default
+  // settings: {
+  //   rebound: {
+  //     tension: 2,
+  //     friction: 5
+  //   },
+  //   spinner: {
+  //     radius: 80,
+  //     sides: 3,
+  //     depth: 4,
+  //     colors: {
+  //       background: '#000000',
+  //       stroke: '#000000',
+  //       base: '#222222',
+  //       child: '#FFFFFF'
+  //     },
+  //     alwaysForward: true, // When false the spring will reverse normally.
+  //     restAt: 0.5, // A number from 0.1 to 0.9 || null for full rotation
+  //     renderBase: true // Optionally render basePolygon
+  //   }
+  // },
 
   spring: null,
   spinner: null,
@@ -84,38 +61,38 @@ export const demo = {
    * is then used to animate the spinner.
    * See more: http://facebook.github.io/rebound-js/docs/rebound.html
    */
-  initRebound() {
+  initRebound(settings) {
 
-    let settings = demo.settings.rebound;
+    let settingsRebound = settings.rebound;
 
     // Create a SpringSystem.
     let springSystem = new rebound.default.SpringSystem();
 
     // Add a spring to the system.
-    demo.spring = springSystem.createSpring(settings.tension, settings.friction);
+    demo.spring = springSystem.createSpring(settingsRebound.tension, settingsRebound.friction);
   },
 
   /**
    * Initialize Spinner with settings.
    */
-  initSpinner() {
+  initSpinner(settings) {
 
-    let settings = demo.settings.spinner;
+    let settingsSpinner = settings.spinner;
 
     // Instantiate Spinner.
-    demo.spinner = new Spinner.Spinner(settings);
+    demo.spinner = new Spinner.Spinner(settingsSpinner);
   },
 
   /**
    * Initialize demo.
    */
-  init() {
+  init(settings) {
 
     let spinnerTypeAutoSpin = true;
 
     // Instantiate animation engine and spinner system.
-    demo.initRebound();
-    demo.initSpinner();
+    demo.initRebound(settings);
+    demo.initSpinner(settings);
 
     // Init animation with Rebound Spring System.
     demo.spinner.init(demo.spring, spinnerTypeAutoSpin);

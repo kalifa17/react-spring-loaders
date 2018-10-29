@@ -1,7 +1,7 @@
-import ExampleComponent from './'
+import SpringLoader from './'
 
-describe('ExampleComponent', () => {
+describe('SpringLoader', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(SpringLoader).toBeTruthy()
   })
 })

@@ -1,41 +1,52 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import * as demo from "./lib/demo.js";
-import styles from "./styles.css";
 
-export default class ExampleComponent extends Component {
-  static propTypes = {
-    text: PropTypes.string
-  };
-
-  componentDidMount() {
-    demo.demo.init();
-  }
-
+export default class SpringLoader extends Component {
   constructor(props) {
     super(props);
 
     this.init = this.init.bind(this);
   }
 
+  componentDidMount() {
+    demo.demo.init(this.props.settings);
+  }
+
   init = () => {
-    console.log("init!!");
-    console.log(demo);
     demo.demo.init();
   };
 
   render() {
-    const { text } = this.props;
-
-    return (
-      <div className={styles.test}>
-        {/* Example Component: {text} */}
-        <div class="content">
-          <button class="button button--trigger" onClick={this.init}>
-            Show Loader
-          </button>
-        </div>
-      </div>
-    );
+    return null;
+    // return (
+    //   <div className={styles.test}>
+    //       <button onClick={this.init}>
+    //         Show Loader
+    //       </button>
+    //   </div>
+    // );
   }
 }
+
+SpringLoader.defaultProps = {
+  settings: {
+    rebound: {
+      tension: 2,
+      friction: 5
+    },
+    spinner: {
+      radius: 80,
+      sides: 3,
+      depth: 4,
+      colors: {
+        background: '#000000',
+        stroke: '#000000',
+        base: '#222222',
+        child: '#FFFFFF'
+      },
+      alwaysForward: true, // When false the spring will reverse normally.
+      restAt: 0.5, // A number from 0.1 to 0.9 || null for full rotation
+      renderBase: true // Optionally render basePolygon
+    }
+  }
+};

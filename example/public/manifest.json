@@ -1,6 +1,6 @@
 {
-  "short_name": "spring-loaders-react",
-  "name": "spring-loaders-react",
+  "short_name": "react-spring-loaders",
+  "name": "react-spring-loaders",
   "start_url": "./index.html",
   "display": "standalone",
   "theme_color": "#000000",

@@ -1,10 +1,10 @@
 {
-  "name": "spring-loaders-react",
+  "name": "react-spring-loaders",
   "version": "1.0.0",
   "description": "Description Spring Loaders with Rebound and Canvas React Component",
   "author": "kalifa17",
   "license": "MIT",
-  "repository": "kalifa17/spring-loaders-react",
+  "repository": "kalifa17/react-spring-loaders",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
