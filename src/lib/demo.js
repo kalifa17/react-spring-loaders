@@ -1,8 +1,6 @@
 'use strict';
-
-import * as main from './main'
+import * as rebound from './rebound'
 import * as Spinner from './Spinner'
-console.log(main);
 console.log(Spinner);
 
 // Custom SETTINGS for each demo in related index.html
@@ -31,6 +29,8 @@ console.log(Spinner);
  * Demo.
  */
 export const demo = {
+
+  //Index 1
   settings: {
     rebound: {
       tension: 2,
@@ -52,6 +52,29 @@ export const demo = {
     }
   },
 
+  //Index 2
+  settings: {
+    rebound: {
+      tension: 14,
+      friction: 10
+    },
+    spinner: {
+      id: 'spinner',
+      radius: 90,
+      sides: 5,
+      depth: 8,
+      colors: {
+        background: '#00272C',
+        stroke: null,
+        base: null,
+        child: '#02C39A'
+      },
+      alwaysForward: true, // When false the spring will reverse normally.
+      restAt: null, // A number from 0.1 to 0.9 || null for full rotation
+      renderBase: false
+    }
+  },
+
   spring: null,
   spinner: null,
 
@@ -66,7 +89,7 @@ export const demo = {
     let settings = demo.settings.rebound;
 
     // Create a SpringSystem.
-    let springSystem = new main.default.SpringSystem();
+    let springSystem = new rebound.default.SpringSystem();
 
     // Add a spring to the system.
     demo.spring = springSystem.createSpring(settings.tension, settings.friction);
@@ -102,7 +125,7 @@ export const demo = {
       // whenever the preload will be completed.
       setTimeout(() => {
         demo.spinner.setComplete();
-      }, 6000);
+      }, 3000);
     } else {
       // Perform real ajax request.
       demo.loadSomething();

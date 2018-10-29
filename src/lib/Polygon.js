@@ -1,3 +1,4 @@
+import * as rebound from './rebound'
 'use strict';
 
 /**
@@ -143,7 +144,7 @@ export class Polygon {
       }
 
       if (childColor) {
-        let rgb = rebound.util.hexToRGB(childColor);
+        let rgb = rebound.default.util.hexToRGB(childColor);
 
         let alphaUnit = 1 / children.length;
         let alpha = alphaUnit + (alphaUnit * i);

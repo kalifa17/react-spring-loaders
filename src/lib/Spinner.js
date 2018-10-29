@@ -1,8 +1,11 @@
 'use strict';
 
 import * as Polygon from './Polygon'
+import * as rebound from './rebound'
 console.log('Polygon');
 console.log(Polygon);
+console.log('rebound');
+console.log(rebound);
 
 /**
  * Spinner.
@@ -112,7 +115,7 @@ export class Spinner {
             toLow = ctx._springRangeLow,
             toHigh = ctx._springRangeHigh;
 
-        val = rebound.MathUtil.mapValueInRange(val, fromLow, fromHigh, toLow, toHigh);
+        val = rebound.default.MathUtil.mapValueInRange(val, fromLow, fromHigh, toLow, toHigh);
 
         // Note that the render method is
         // called with the spring motion value.
