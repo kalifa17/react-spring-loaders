@@ -8,7 +8,7 @@
 
 ![Demo](https://lh3.googleusercontent.com/aH293rc91KU5LtiLgOqUvqTS2fmF4Q7tfPI6umAgRZmHaNB59M9KTpNeWRzG1rghl-2xwPsIXNZgwnx2_9F3AbRDqLxWWGpHPl9U0BBa4egiqm_K1z-5UXsBVPQdpH-v_XRpGq9fbQ=w552-h440-no)
 
-[**Live Demo**](http://casesandberg.github.io/react-color/)
+[**Live Demo**](https://kalifa17.github.io/react-spring-loaders)
 
 
 ## Install
