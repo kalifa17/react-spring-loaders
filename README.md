@@ -1,8 +1,12 @@
 # Spring Loaders React Component
 
-> Spring Loaders with Rebound and Canvas
+> Loading Spinner: Spring Loaders with Rebound and Canvas
 
 [![NPM](https://img.shields.io/npm/v/react-spring-loaders.svg)](https://www.npmjs.com/package/react-spring-loaders) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+* **Loading Spinners** - Choose one of the settings available
+
+* **Make Your Own** - Configure any loading spinner made of polygonal shapes
 
 ## Demo
 
@@ -62,3 +66,7 @@ export default class App extends Component {
 ## License
 
 MIT © [kalifa17](https://github.com/kalifa17)
+
+## Credits
+  
+  - [Original article](https://tympanus.net/codrops/2016/03/08/spring-loaders-rebound-canvas/)
