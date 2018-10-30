@@ -174,7 +174,7 @@ export class Polygon {
     context.translate(this._x, this._y);
 
     if (this.rotation !== 0) {
-      context.rotate(rebound.MathUtil.degreesToRadians(this.rotation));
+      context.rotate(rebound.default.MathUtil.degreesToRadians(this.rotation));
     }
 
     if (this.scale !== 1) {

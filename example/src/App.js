@@ -9,7 +9,7 @@ const settings = {
   spinner: {
     id: "spinner",
     radius: 90,
-    sides: 5,
+    sides: 6,
     depth: 8,
     colors: {
       background: "#00272C",
@@ -28,7 +28,8 @@ export default class App extends Component {
     return (
       <div>
         <SpringLoader settings={settings} />
-        {/* <SpringLoader /> */}
+        {/* Default Settings 
+        <SpringLoader /> */}
       </div>
     );
   }
